@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fragment } from 'react';
 import Header from './Components/Header';
 import Formulario from './Components/Formulario';
 import ListaRecetas from './Components/ListaRecetas'; 
@@ -8,7 +7,7 @@ import ListaRecetas from './Components/ListaRecetas';
 // los context en sima del padre
 import CategoriasProvider from './Context/CategoriaContext';
 import RecetasProvider from './Context/RecetasContext'; 
-import ModalProvider from './Context/RecetasContext';
+import ModalProvider from './Context/ModalContext';
 // el orden no importa que context va primero con tal que sea padres
 
 function App() {
@@ -16,20 +15,18 @@ function App() {
     <CategoriasProvider>
       <RecetasProvider>
         <ModalProvider>
-
-          <Fragment>
             
-            <Header /> 
+          <Header /> 
             
-            <div className="container mt-5">
-              <div className="row">
-                <Formulario />
-              </div>
-
-              <ListaRecetas /> 
+          <div className="container mt-5">
+        
+            <div className="row">
+              <Formulario />
             </div>
 
-          </Fragment>
+            <ListaRecetas /> 
+        
+          </div>
         
         </ModalProvider>
       </RecetasProvider>

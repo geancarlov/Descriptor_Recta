@@ -31,7 +31,7 @@ const RecetasProvider = (props) => {
             
             obtnerRecetas();
         }
-
+    // eslint-disable-next-line
     }, [busqueda])
 
 
